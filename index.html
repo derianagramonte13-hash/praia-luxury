@@ -273,7 +273,7 @@ footer{background:#020202;border-top:1px solid rgba(212,175,55,.08);padding:5rem
   <div class="hero-right">
     <div class="hero-wa">
       <div class="vline"></div>
-      <a href="https://wa.me/18296703938" target="_blank">WhatsApp Us</a>
+      <a href="https://wa.me/19298372072" target="_blank">WhatsApp Us</a>
       <div class="vline2"></div>
     </div>
   </div>
@@ -623,7 +623,7 @@ footer{background:#020202;border-top:1px solid rgba(212,175,55,.08);padding:5rem
       <h5>Contact</h5>
       <div class="ft-contact-item">
         <span class="ft-contact-icon"><svg viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2 5a2 2 0 0 1 2-2h3.28a1 1 0 0 1 .948.684l1.498 4.493a1 1 0 0 1-.502 1.21l-2.257 1.13a11.042 11.042 0 0 0 5.516 5.516l1.13-2.257a1 1 0 0 1 1.21-.502l4.493 1.498A1 1 0 0 1 22 15.72V19a2 2 0 0 1-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg></span>
-        <div class="ft-contact-text"><small>WhatsApp / Call</small><a href="tel:+18296703938">+1 (829) 670-3938</a></div>
+        <div class="ft-contact-text"><small>WhatsApp / Call</small><a href="tel:+18296703938">+1 (929) 837-2072</a></div>
       </div>
       <div class="ft-contact-item">
         <span class="ft-contact-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/></svg></span>
@@ -651,6 +651,17 @@ footer{background:#020202;border-top:1px solid rgba(212,175,55,.08);padding:5rem
 </div>
 
 <script>
+function switchImg(dot, idx) {
+  const wrap = dot.closest('.fc-img-wrap');
+  const imgs = wrap.querySelectorAll('img');
+  const dots = wrap.querySelectorAll('.fc-dot');
+  imgs.forEach((img, i) => {
+    img.classList.toggle('active', i === idx);
+    img.classList.toggle('inactive', i !== idx);
+  });
+  dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+}
+
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('scrolled',window.scrollY>60));
 document.getElementById('ham').addEventListener('click',()=>document.getElementById('mob').classList.toggle('open'));
 function closeMob(){document.getElementById('mob').classList.remove('open')}
