@@ -751,6 +751,13 @@ function quoteSMS(){const msg=buildQuoteMsg();if(msg)window.location.href=`sms:+
 /* QUOTE: WhatsApp */
 function quoteWhatsApp(){const msg=buildQuoteMsg();if(msg)open(`https://wa.me/18296703938?text=${encodeURIComponent(msg)}`,'_blank')}
 
+/* CLEAR ERRORS ON INPUT */
+['b-name','b-phone','b-pickup','b-dest','b-date','b-time',
+ 'q-name','q-phone'].forEach(id=>{
+  const el=document.getElementById(id);
+  if(el)el.addEventListener('input',()=>clearError(id));
+});
+
 function v(id){return document.getElementById(id).value.trim()}
 </script>
 </body>
