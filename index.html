@@ -111,6 +111,48 @@ section{padding:7rem 5%}
 .svc-airports{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
 .ap-pill{font-size:.55rem;letter-spacing:.15em;border:1px solid rgba(212,175,55,.2);color:var(--gold3);padding:.25rem .65rem}
 
+/* ── CHAUFFEUR EXPERIENCE ── */
+#chauffeur-exp{background:var(--black);padding:0 5%}
+.chauf-layout{display:grid;grid-template-columns:1.2fr 1fr;min-height:580px;border:1px solid rgba(212,175,55,.1);overflow:hidden}
+.chauf-img{position:relative;overflow:hidden}
+.chauf-img img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:brightness(.8);transition:.6s;display:block}
+.chauf-img:hover img{filter:brightness(.9);transform:scale(1.03)}
+.chauf-img-overlay{position:absolute;inset:0;background:linear-gradient(to right,transparent 55%,var(--black) 100%)}
+.chauf-content{background:var(--dark2);padding:5rem 4rem;display:flex;flex-direction:column;justify-content:center}
+.chauf-tag{font-size:.58rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.chauf-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,3vw,2.8rem);font-weight:300;color:var(--white);line-height:1.2;margin-bottom:.8rem}
+.chauf-title em{font-style:italic;color:var(--gold)}
+.chauf-rule{width:50px;height:1px;background:var(--gold);margin:1.5rem 0}
+.chauf-desc{font-size:.72rem;color:var(--gray2);line-height:2;margin-bottom:2.5rem}
+.chauf-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid rgba(212,175,55,.1)}
+.chauf-stat{display:flex;flex-direction:column}
+.chauf-stat-num{font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:var(--gold);line-height:1}
+.chauf-stat-label{font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gray2);margin-top:.3rem}
+@media(max-width:900px){
+  .chauf-layout{grid-template-columns:1fr}
+  .chauf-img{height:340px}
+  .chauf-img-overlay{background:linear-gradient(to bottom,transparent 50%,var(--black) 100%)}
+  .chauf-content{padding:3rem 2rem}
+  .chauf-stats{gap:2rem}
+}
+
+/* ── SERVICE IMAGE CARDS ── */
+.svc-img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem}
+.svc-ic{background:var(--dark2);border:1px solid rgba(212,175,55,.08);overflow:hidden;transition:.4s;position:relative}
+.svc-ic:hover{border-color:rgba(212,175,55,.3);transform:translateY(-5px);box-shadow:0 15px 50px rgba(0,0,0,.5)}
+.svc-ic-img{height:220px;overflow:hidden;position:relative}
+.svc-ic-img img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.62) saturate(.9);transition:.7s;display:block}
+.svc-ic:hover .svc-ic-img img{transform:scale(1.06);filter:brightness(.75) saturate(1.05)}
+.svc-ic-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,5,5,.88) 0%,rgba(5,5,5,.3) 50%,transparent 100%);pointer-events:none}
+.svc-ic-num{position:absolute;top:.8rem;right:1rem;font-family:'Cormorant Garamond',serif;font-size:2.8rem;font-weight:300;color:rgba(212,175,55,.2);line-height:1;z-index:1;pointer-events:none}
+.svc-ic-body{padding:2rem}
+.svc-ic-icon{width:44px;height:44px;border:1px solid rgba(212,175,55,.25);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.2rem;transition:.3s}
+.svc-ic-icon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.svc-ic:hover .svc-ic-icon{border-color:var(--gold);background:rgba(212,175,55,.06)}
+.svc-ic-title{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:500;color:var(--white);margin-bottom:.7rem}
+.svc-ic-desc{font-size:.68rem;color:var(--gray2);line-height:1.9}
+.svc-ic-pills{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1rem}
+
 /* ── FLEET ── */
 #fleet{background:var(--black)}
 .fleet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:2rem}
@@ -290,6 +332,38 @@ footer{background:#020202;border-top:1px solid rgba(212,175,55,.08);padding:5rem
 
 <div class="divider"></div>
 
+<div class="divider"></div>
+
+<!-- CHAUFFEUR EXPERIENCE -->
+<section id="chauffeur-exp">
+  <div class="chauf-layout fade-up">
+    <div class="chauf-img">
+      <img src="chauffeur-door.jpg" alt="Professional chauffeur opening vehicle door"/>
+      <div class="chauf-img-overlay"></div>
+    </div>
+    <div class="chauf-content">
+      <span class="chauf-tag">The Praia Standard</span>
+      <h2 class="chauf-title">Professional<br/><em>Chauffeur Experience</em></h2>
+      <div class="chauf-rule"></div>
+      <p class="chauf-desc">Our service is designed for clients who value discretion, punctuality, and comfort. From airport pickups to corporate transportation, every ride is handled with professionalism and attention to detail. Your time is valuable — we make sure every journey reflects that.</p>
+      <div class="chauf-stats">
+        <div class="chauf-stat">
+          <span class="chauf-stat-num">500+</span>
+          <span class="chauf-stat-label">Satisfied Clients</span>
+        </div>
+        <div class="chauf-stat">
+          <span class="chauf-stat-num">24/7</span>
+          <span class="chauf-stat-label">Availability</span>
+        </div>
+        <div class="chauf-stat">
+          <span class="chauf-stat-num">100%</span>
+          <span class="chauf-stat-label">On-Time Rate</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- SERVICES -->
 <section id="services">
   <div class="sec-header fade-up">
@@ -297,33 +371,57 @@ footer{background:#020202;border-top:1px solid rgba(212,175,55,.08);padding:5rem
     <h2 class="sec-title">Our <em>Services</em></h2>
     <div class="sec-rule"><div class="sec-rule-diamond"></div></div>
   </div>
-  <div class="services-grid">
-    <div class="svc-card fade-up">
-      <div class="svc-glyph"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-      <div class="svc-n">01</div>
-      <div class="svc-title">Hourly Services</div>
-      <p class="svc-desc">Flexible by-the-hour chauffeur service for business meetings, city tours, shopping, or any occasion that demands total flexibility and privacy.</p>
-    </div>
-    <div class="svc-card fade-up" style="transition-delay:.1s">
-      <div class="svc-glyph"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
-      <div class="svc-n">02</div>
-      <div class="svc-title">Corporate Transportation</div>
-      <p class="svc-desc">Dedicated corporate accounts for executives and teams. Client pickups, roadshows, and multi-stop itineraries handled with absolute precision.</p>
-    </div>
-    <div class="svc-card fade-up" style="transition-delay:.2s">
-      <div class="svc-glyph"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-      <div class="svc-n">03</div>
-      <div class="svc-title">Airport Transfers</div>
-      <p class="svc-desc">Seamless arrivals and departures. We monitor every flight in real time — if it's delayed, so are we. Available at all major NY area airports.</p>
-      <div class="svc-airports">
-        <span class="ap-pill">JFK</span><span class="ap-pill">LGA</span><span class="ap-pill">Newark EWR</span><span class="ap-pill">Teterboro</span>
+  <div class="svc-img-grid">
+    <div class="svc-ic fade-up">
+      <div class="svc-ic-img">
+        <img src="airport-transfer.jpg" alt="Airport Transfer"/>
+        <div class="svc-ic-overlay"></div>
+        <div class="svc-ic-num">01</div>
+      </div>
+      <div class="svc-ic-body">
+        <div class="svc-ic-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.28h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+        <div class="svc-ic-title">Airport Transfers</div>
+        <p class="svc-ic-desc">Reliable airport transportation to and from JFK, LGA, EWR, and Teterboro, with professional pickup and punctual service.</p>
+        <div class="svc-ic-pills">
+          <span class="ap-pill">JFK</span><span class="ap-pill">LGA</span><span class="ap-pill">EWR</span><span class="ap-pill">TEB</span>
+        </div>
       </div>
     </div>
-    <div class="svc-card fade-up" style="transition-delay:.3s">
-      <div class="svc-glyph"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M2 21a10 10 0 0 1 20 0"/></svg></div>
-      <div class="svc-n">04</div>
-      <div class="svc-title">Executive Chauffeur</div>
-      <p class="svc-desc">A personal chauffeur assigned to you. Impeccably presented, discreet, and trained in executive hospitality for VIP-level service every time.</p>
+    <div class="svc-ic fade-up" style="transition-delay:.1s">
+      <div class="svc-ic-img">
+        <img src="hourly-service.jpg" alt="Hourly Chauffeur Service"/>
+        <div class="svc-ic-overlay"></div>
+        <div class="svc-ic-num">02</div>
+      </div>
+      <div class="svc-ic-body">
+        <div class="svc-ic-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+        <div class="svc-ic-title">Hourly Service</div>
+        <p class="svc-ic-desc">Flexible hourly chauffeur service for meetings, events, errands, and personal transportation throughout the day.</p>
+      </div>
+    </div>
+    <div class="svc-ic fade-up" style="transition-delay:.2s">
+      <div class="svc-ic-img">
+        <img src="corporate-transportation.jpg" alt="Corporate Transportation"/>
+        <div class="svc-ic-overlay"></div>
+        <div class="svc-ic-num">03</div>
+      </div>
+      <div class="svc-ic-body">
+        <div class="svc-ic-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+        <div class="svc-ic-title">Corporate Transportation</div>
+        <p class="svc-ic-desc">Professional transportation for executives, business meetings, corporate events, and VIP clients.</p>
+      </div>
+    </div>
+    <div class="svc-ic fade-up" style="transition-delay:.3s">
+      <div class="svc-ic-img">
+        <img src="private-chauffeur.jpg" alt="Private Chauffeur Service"/>
+        <div class="svc-ic-overlay"></div>
+        <div class="svc-ic-num">04</div>
+      </div>
+      <div class="svc-ic-body">
+        <div class="svc-ic-icon"><svg viewBox="0 0 24 24"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z"/><path d="M2 21a10 10 0 0 1 20 0"/></svg></div>
+        <div class="svc-ic-title">Private Chauffeur Service</div>
+        <p class="svc-ic-desc">Premium private chauffeur experience with comfort, discretion, and professional service from pickup to destination.</p>
+      </div>
     </div>
   </div>
 </section>
